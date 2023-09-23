@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static org.bukkit.ChatColor.GRAY;
+import static org.bukkit.ChatColor.DARK_GRAY;
 
 public class DailyQuests extends GuiUtils implements QuestsGui, Listener {
     private List<Quests> quests = new ArrayList<>(List.of(Quests.values()));
@@ -25,7 +25,7 @@ public class DailyQuests extends GuiUtils implements QuestsGui, Listener {
     private final Inventory inv;
     private final Player p;
     public DailyQuests(Player player) {
-        inv = Bukkit.createInventory(null, 27, GRAY + "Daily quests");
+        inv = Bukkit.createInventory(null, 27, DARK_GRAY + "Daily quests");
         p = player;
 
         initItems();
