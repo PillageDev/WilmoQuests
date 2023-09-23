@@ -1,0 +1,4 @@
+name: WilmoQuests
+version: '${project.version}'
+main: net.wilmo.wilmoquests.WilmoQuests
+api-version: '1.19'
