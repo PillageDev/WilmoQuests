@@ -2,3 +2,11 @@ name: WilmoQuests
 version: '${project.version}'
 main: net.wilmo.wilmoquests.WilmoQuests
 api-version: '1.19'
+authors:
+  - Pillage
+  - NoKlyf_
+
+commands:
+  quests:
+    usage: /quests
+    description: Opens the quest menu
