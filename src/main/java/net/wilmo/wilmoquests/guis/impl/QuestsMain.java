@@ -13,7 +13,7 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import static org.bukkit.ChatColor.GRAY;
+import static org.bukkit.ChatColor.DARK_GRAY;
 
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public class QuestsMain extends GuiUtils implements QuestsGui, Listener {
     private final Player p;
 
     public QuestsMain(Player player) {
-        inv = Bukkit.createInventory(null, 9, GRAY + "Quests");
+        inv = Bukkit.createInventory(null, 9, DARK_GRAY + "Quests");
         p = player;
 
         initItems();
