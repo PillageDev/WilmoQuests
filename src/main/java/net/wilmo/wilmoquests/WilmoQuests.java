@@ -26,12 +26,30 @@ public final class WilmoQuests extends JavaPlugin {
         getLogger().info("WilmoQuests has been disabled!");
     }
     private void registerCommands() {
-        getCommand("quests").setExecutor(new QuestsCommand());
+        try {
+            getCommand("quests").setExecutor(new QuestsCommand());
+            getLogger().info("Registered quest command");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void registerListeners() {
-        getServer().getPluginManager().registerEvents(new QuestsMain(null), this);
-        getServer().getPluginManager().registerEvents(new DailyQuests(null), this);
+        try {  
+            getServer().getPluginManager().registerEvents(new QuestsMain(null), this);
+            getLogger().info("Registered quest listener");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            getServer().getPluginManager().registerEvents(new DailyQuests(null), this);
+            getLogger().info("Registered daily quest listener");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static WilmoQuests getInstance() {
