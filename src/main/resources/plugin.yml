@@ -1,11 +1,12 @@
 name: WilmoQuests
 version: '${project.version}'
 main: net.wilmo.wilmoquests.WilmoQuests
-api-version: '1.19'
+api-version: '1.13'
 authors:
   - Pillage
   - NoKlyf_
-
+  - Incbom
+  
 commands:
   quests:
     usage: /quests
