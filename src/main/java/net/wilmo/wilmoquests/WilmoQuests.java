@@ -26,7 +26,7 @@ public final class WilmoQuests extends JavaPlugin {
         getLogger().info("WilmoQuests has been disabled!");
     }
     private void registerCommands() {
-        try {
+        try { // Impossible to fail, unless you didn't register the command in the plugin.yml file
             getCommand("quests").setExecutor(new QuestsCommand());
             getLogger().info("Registered quest command");
         }
@@ -35,7 +35,7 @@ public final class WilmoQuests extends JavaPlugin {
         }
     }
 
-    private void registerListeners() {
+    private void registerListeners() { // Not useful, listeners do not throw exceptions
         try {  
             getServer().getPluginManager().registerEvents(new QuestsMain(null), this);
             getLogger().info("Registered quest listener");
